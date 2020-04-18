@@ -97,7 +97,7 @@ class Nominatim
                 throw new NominatimException('http_client must have a configured base_uri.');
             }
 
-            if ($application_url_client !== $application_url) {
+            if ((string)$application_url_client !== $application_url) {
                 throw new NominatimException('http_client parameter hasn\'t the same url application.');
             }
         } else {
